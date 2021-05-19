@@ -1,0 +1,57 @@
+<html>
+<title>COUNTER</title>
+<head>
+<script>
+function counter(type){
+var count=document.getElementById("value").innerHTML;
+var style=0;
+if(type==='decrease'){
+document.getElementById("value").innerHTML=count-1;
+style=parseInt(count)-1;
+}
+else if(type==='increase'){
+document.getElementById("value").innerHTML=parseInt(count)+1;
+style=parseInt(count)+1
+}
+else{
+document.getElementById("value").innerHTML=0;
+style=0;
+}
+if(style>0){
+document.getElementById("value").style.color="green";
+}
+else if(style < 0){
+document.getElementById("value").style.color="red";
+}
+else {
+document.getElementById("value").style.color="black";
+}
+}
+
+
+
+</script>
+</head>
+<body>
+<center>
+<div style="padding-top:102px">
+<h2 style="font-size:39px" >Counter </h2>
+<span id="value" style="font-size:81px ">0</span><br><br>
+<div>
+<button type="button" onclick="counter('decrease')""background-color: #c1202000";
+    "width: 99px";
+    "border: 2px solid";
+    "height: 27px">Decrease</button>
+<button type="button" onclick="counter('reset')""background-color: #c1202000";
+    "width: 99px";
+    "border: 2px solid";
+    "height: 27px">Reset</button>
+<button type="button" onclick="counter('increase')""background-color: #c1202000";
+    "width:99px";
+    "border: 2px solid";
+    "height: 27px">Increase</button>
+</div>
+</div>
+</center>
+</body>
+</html>

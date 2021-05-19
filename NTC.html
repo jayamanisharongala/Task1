@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<title> Temperature Converter</title>
+<head>
+<script>
+	function change(){
+	var degree=document.getElementById("text1").value;
+	var type=document.getElementById("selectbox").value;
+	if(type==="Farenheit")
+	{
+	document.getElementById("result").innerHTML=(degree * 9/5) + 32 ;
+	}
+	else{
+	document.getElementById("result").innerHTML=(degree-32) * (5/9) ;
+	}
+	}
+</script>
+</head>
+
+<body>
+<div>
+<h2>Convert temperatures from Celsius to Fahrenheit and Vice-Versa</h2>
+<div>
+<div style="
+    width: 15%;
+    padding: 3px;
+    float: left;">
+<span>
+ <p style="color: grey;">Degrees</p> </span>
+<span><input id="text1" placeholder="Enter Value" type="number" style="
+    width: 161px;
+    height: 28px;
+    border: 1px solid black;
+"/></span>
+</div>
+<div style="
+    width: 8%;
+    padding: 3px;
+    float: left;">
+<span>
+<p style="color: grey;">Type</p></span>
+<span><select id="selectbox" style="
+    height: 33px;
+    width: 120px;
+    border: 1px solid black;
+">
+<option value="Farenheit">Farenheit</option>
+<option value="Celsius">Celsius</option>
+</select></span>
+</div>
+<div style="
+    width: 15%;
+    padding: 3px;
+	padding-left: 57px;
+    float: left;padding-top:52px;">
+<button type="button" onclick="change()" style="
+
+    background-color: #64b5f6;
+    width: 91px;
+    height: 33px;
+    border: 1px solid #64b5f6;
+    color: white;
+    border-radius: 4px;
+">Convert</button> 
+</div>
+
+</div>
+<br/>
+
+</div>
+<div style="width: 16px;padding-top: 10px;margin-top: 71px;">
+<span><p style="color: grey;">Result </p></span>
+<span><h2 id="result"></h2></span>
+</div>
+
+
+</body>
+</html>
